@@ -1,6 +1,10 @@
 thread=$1
 mem=$2
 
+fastp -i raw/070424-LHZ-PBMC_R1.fq.gz -I raw/070424-LHZ-PBMC_R2.fq.gz \
+      -o raw/PBMC_1.fastq -O raw/PBMC_2.fastq \
+      -w $thread
+
 mysamtools="/public/home/liunangroup/liangyan/software/miniconda3/bin/samtools"
 myjava="/public/home/liunangroup/liangyan/software/miniconda3/envs/wgs/bin/java"
 mybwa="/public/home//liunangroup/liangyan/software/bwa-0.7.17/bwa"
